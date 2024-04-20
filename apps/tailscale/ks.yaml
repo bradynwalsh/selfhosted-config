@@ -38,3 +38,21 @@ spec:
     name: flux-system
   timeout: 10m0s
   wait: true
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/fluxcd-community/flux2-schemas/main/kustomization-kustomize-v1.json
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: tailscale-proxy
+  namespace: flux-system
+spec:
+  dependsOn:
+  - name: tailscale-operator
+  interval: 1h0m0s
+  path: ./apps/tailscale/connectors
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  timeout: 10m0s
+  wait: true

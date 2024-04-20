@@ -1,0 +1,8 @@
+apiVersion: tailscale.com/v1alpha1
+kind: Connector
+metadata:
+  name: ts-exit-node-connector
+  namespace: tailscale
+spec:
+  hostname: ts-k8s-exit-node
+  exitNode: true
