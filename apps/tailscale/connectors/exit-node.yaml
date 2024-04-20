@@ -4,5 +4,5 @@ metadata:
   name: ts-exit-node-connector
   namespace: tailscale
 spec:
-  hostname: ts-k8s-exit-node
+  hostname: k8s-exit-node
   exitNode: true
