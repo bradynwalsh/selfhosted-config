@@ -16,7 +16,8 @@ spec:
     name: flux-system
   timeout: 2m0s
   healthChecks:
-    - kind: Secret
+    - apiVersion: v1
+      kind: Secret
       name: operator-oauth
       namespace: tailscale
 ---
