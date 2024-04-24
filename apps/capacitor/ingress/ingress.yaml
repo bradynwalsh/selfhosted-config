@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://github.com/yannh/kubernetes-json-schema/raw/master/v1.30.0/ingress.json
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: capacitor-ingress
+  namespace: flux-system
+  labels:
+    name: capacitor-ingress
+spec:
+  ingressClassName: tailscale
+  defaultBackend:
+    service:
+      name: capacitor
+      port:
+        name: http
+  tls:
+    - hosts:
+      - capacitor

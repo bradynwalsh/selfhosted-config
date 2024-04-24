@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - ./sealed-secrets/ks.yaml
   - ./tailscale/ks.yaml
+  - ./capacitor/ks.yaml
