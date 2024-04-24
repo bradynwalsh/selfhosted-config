@@ -9,7 +9,7 @@ spec:
   url: oci://ghcr.io/gimlet-io/capacitor-manifests
   ref:
     tag: v0.4.1
-    verify:
+  verify:
     provider: cosign
     matchOIDCIdentity:
       - issuer: "https://token.actions.githubusercontent.com"
