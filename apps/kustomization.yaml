@@ -5,3 +5,4 @@ resources:
   - ./tailscale/ks.yaml
   - ./capacitor/ks.yaml
   - ./monitoring/ks.yaml
+  - ./ntfy/ks.yaml
