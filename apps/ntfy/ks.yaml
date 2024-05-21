@@ -16,3 +16,4 @@ spec:
     name: flux-system
   timeout: 10m0s
   wait: true
+  force: true
