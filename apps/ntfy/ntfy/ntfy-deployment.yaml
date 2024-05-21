@@ -8,6 +8,7 @@ spec:
   revisionHistoryLimit: 1
   replicas: 1
   strategy:
+    rollingUpdate: null
     type: Recreate
   selector:
     matchLabels:
