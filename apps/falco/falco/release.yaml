@@ -24,8 +24,9 @@ spec:
         enabled: true
       prometheusRules:
         enabled: true
-      webhook:
-        address: http://ntfy-svc.ntfy/falco
-        minimumpriority: notice
+      config:
+        webhook:
+          address: http://ntfy-svc.ntfy/falco
+          minimumpriority: notice
       webui:
         enabled: false
