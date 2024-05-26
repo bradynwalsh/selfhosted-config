@@ -1,0 +1,31 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: falco
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: falco
+      sourceRef:
+        kind: HelmRepository
+        name: falcosecurity
+      version: "4.3.1"
+  interval: 1h0m0s
+  releaseName: falco
+  targetNamespace: falco
+  values:
+    tty: true
+    driver:
+      kind: ebpf
+      falcosidekick:
+        enabled: true
+        serviceMonitor:
+          enabled: true
+        prometheusRules:
+          enabled: true
+        webhook:
+          address: http://ntfy-svc/falco
+          minimumpriority: notice
+        webui:
+          enabled: false

@@ -6,3 +6,4 @@ resources:
   - ./capacitor/ks.yaml
   - ./monitoring/ks.yaml
   - ./ntfy/ks.yaml
+  - ./falco/ks.yaml
