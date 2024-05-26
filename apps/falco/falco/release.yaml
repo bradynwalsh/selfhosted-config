@@ -46,6 +46,6 @@ spec:
       config:
         webhook:
           address: http://ntfy-svc.ntfy/falco
-          minimumpriority: alert
+          minimumpriority: notice
       webui:
         enabled: false
