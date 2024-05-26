@@ -18,6 +18,25 @@ spec:
     tty: true
     driver:
       kind: ebpf
+    customRules:
+      # Containers we run that contact k8s API server
+      rules-k8s-containers-macro.yaml: |-
+        - macro: k8s_containers
+          override:
+            condition: append
+          condition: or (container.image.repository in (
+            registry.k8s.io/kube-state-metrics/kube-state-metrics,
+            docker.io/bitnami/sealed-secrets-controller,
+            docker.io/tailscale/k8s-operator,
+            docker.io/tailscale/tailscale,
+            quay.io/kiwigrid/k8s-sidecar,
+            quay.io/prometheus/prometheus,
+            ghcr.io/gimlet-io/capacitor,
+            ghcr.io/fluxcd/helm-controller,
+            ghcr.io/fluxcd/kustomize-controller,
+            ghcr.io/fluxcd/source-controller,
+            ghcr.io/fluxcd/notification-controller
+          ))
     falcosidekick:
       enabled: true
       serviceMonitor:
@@ -27,6 +46,6 @@ spec:
       config:
         webhook:
           address: http://ntfy-svc.ntfy/falco
-          minimumpriority: alert
+          minimumpriority: notice
       webui:
         enabled: false
