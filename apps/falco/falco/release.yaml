@@ -12,6 +12,7 @@ spec:
         name: falcosecurity
       version: "4.3.1"
   interval: 1h0m0s
+  timeout: 10m
   releaseName: falco
   targetNamespace: falco
   values:
@@ -35,8 +36,7 @@ spec:
             ghcr.io/fluxcd/helm-controller,
             ghcr.io/fluxcd/kustomize-controller,
             ghcr.io/fluxcd/source-controller,
-            ghcr.io/fluxcd/notification-controller
-          ))
+            ghcr.io/fluxcd/notification-controller))
     falcosidekick:
       enabled: true
       serviceMonitor:
