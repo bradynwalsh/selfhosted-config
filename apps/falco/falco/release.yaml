@@ -32,6 +32,7 @@ spec:
             docker.io/tailscale/k8s-operator,
             docker.io/tailscale/tailscale,
             quay.io/kiwigrid/k8s-sidecar,
+            quay.io/platform9/dashboard-metrics-scraper,
             quay.io/prometheus/prometheus,
             ghcr.io/gimlet-io/capacitor,
             ghcr.io/fluxcd/helm-controller,
