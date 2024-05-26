@@ -18,14 +18,14 @@ spec:
     tty: true
     driver:
       kind: ebpf
-      falcosidekick:
+    falcosidekick:
+      enabled: true
+      serviceMonitor:
         enabled: true
-        serviceMonitor:
-          enabled: true
-        prometheusRules:
-          enabled: true
-        webhook:
-          address: http://ntfy-svc/falco
-          minimumpriority: notice
-        webui:
-          enabled: false
+      prometheusRules:
+        enabled: true
+      webhook:
+        address: http://ntfy-svc/falco
+        minimumpriority: notice
+      webui:
+        enabled: false
