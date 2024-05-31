@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: falcosecurity
-      version: "4.3.1"
+      version: "4.4.0"
   interval: 1h0m0s
   timeout: 10m
   releaseName: falco
@@ -18,7 +18,7 @@ spec:
   values:
     tty: true
     driver:
-      kind: ebpf
+      kind: auto
     customRules:
       # Containers we run that contact k8s API server
       rules-k8s-containers-macro.yaml: |-
