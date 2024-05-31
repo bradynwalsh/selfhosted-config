@@ -12,7 +12,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: tailscale
-      version: 1.66.3
+      version: 1.66.4
   install:
     crds: Create
   interval: 1h0m0s
