@@ -18,7 +18,7 @@ spec:
   values:
     tty: true
     driver:
-      kind: ebpf
+      kind: auto
     customRules:
       # Containers we run that contact k8s API server
       rules-k8s-containers-macro.yaml: |-
