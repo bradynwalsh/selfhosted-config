@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: prometheus-community
-      version: "59.0.0"
+      version: "59.1.0"
   interval: 1h0m0s
   timeout: 10m
   releaseName: kube-prometheus-stack
