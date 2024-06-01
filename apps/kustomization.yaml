@@ -7,3 +7,4 @@ resources:
   - ./monitoring/ks.yaml
   - ./ntfy/ks.yaml
   - ./falco/ks.yaml
+  - ./trivy/ks.yaml

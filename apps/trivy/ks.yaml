@@ -1,0 +1,30 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: OCIRepository
+metadata:
+  name: trivy-operator
+  namespace: flux-system
+spec:
+  interval: 15m0s
+  url: oci://ghcr.io/aquasecurity/helm-charts/trivy-operator
+  ref:
+    tag: 0.23.1
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/fluxcd-community/flux2-schemas/main/kustomization-kustomize-v1.json
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: trivy-operator
+  namespace: flux-system
+spec:
+  dependsOn:
+  - name: kube-prometheus-stack
+  interval: 1h0m0s
+  path: ./apps/trivy/trivy-operator
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  timeout: 10m0s
+  wait: true
+  force: true
