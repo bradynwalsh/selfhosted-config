@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: falcosecurity
-      version: "4.4.0"
+      version: "4.4.1"
   interval: 1h0m0s
   timeout: 10m
   releaseName: falco
