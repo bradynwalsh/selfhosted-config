@@ -1,0 +1,14 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: falcosidekick-ingress
+spec:
+  ingressClassName: tailscale
+  defaultBackend:
+    service:
+      name: falco-falcosidekick-ui
+      port:
+        name: http
+  tls:
+    - hosts:
+      - falco

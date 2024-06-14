@@ -51,4 +51,6 @@ spec:
           address: http://ntfy-svc.ntfy/falco
           minimumpriority: notice
       webui:
-        enabled: false
+        enabled: true
+        redis:
+          storageEnabled: false
