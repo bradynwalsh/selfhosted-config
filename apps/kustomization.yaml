@@ -8,3 +8,4 @@ resources:
   - ./ntfy/ks.yaml
   - ./falco/ks.yaml
   - ./trivy/ks.yaml
+  - ./cloudnative-pg/ks.yaml

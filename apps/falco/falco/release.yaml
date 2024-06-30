@@ -35,6 +35,7 @@ spec:
             quay.io/platform9/dashboard-metrics-scraper,
             quay.io/prometheus/prometheus,
             ghcr.io/aquasecurity/trivy-operator,
+            ghcr.io/cloudnative-pg/cloudnative-pg,
             ghcr.io/gimlet-io/capacitor,
             ghcr.io/fluxcd/helm-controller,
             ghcr.io/fluxcd/kustomize-controller,
