@@ -4,8 +4,6 @@ metadata:
   name: postgres-db
   namespace: postgres
 spec:
-  imageCatalogRef:
-    major: 16
   instances: 3
   storage:
     storageClass: sata
