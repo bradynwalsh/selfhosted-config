@@ -1,0 +1,19 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: postgres-db
+  namespace: postgres
+spec:
+  imageCatalogRef:
+    major: 16
+  instances: 3
+  storage:
+    storageClass: sata
+    size: 5Gi
+  monitoring:
+    enablePodMonitor: true
+  managed:
+    roles:
+    - name: app
+      createdb: true
+      login: true
