@@ -43,6 +43,13 @@ spec:
             ghcr.io/fluxcd/kustomize-controller,
             ghcr.io/fluxcd/source-controller,
             ghcr.io/fluxcd/notification-controller))
+      rules-k8s-cnpg-wal-macro.yaml: |-
+        - macro: postgres_running_wal_e
+          override:
+            condition: append
+          condition: or (proc.pname=postgres and (
+            proc.cmdline startswith "sh -c /controller/manager wal-restore" or
+            proc.cmdline startswith "sh -c /controller/manager wal-archive"))
     falcosidekick:
       enabled: true
       serviceMonitor:
