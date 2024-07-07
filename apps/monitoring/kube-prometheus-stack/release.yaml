@@ -22,6 +22,12 @@ spec:
   values:
     grafana:
       defaultDashboardsEditable: false
+    prometheus:
+      prometheusSpec:
+        podMonitorSelectorNilUsesHelmValues: false
+        ruleSelectorNilUsesHelmValues: false
+        serviceMonitorSelectorNilUsesHelmValues: false
+        probeSelectorNilUsesHelmValues: false
     kubeEtcd:
       enabled: false
     kubeProxy:
