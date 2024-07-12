@@ -15,3 +15,20 @@ spec:
     - name: app
       createdb: true
       login: true
+  backup:
+    retentionPolicy: '30d'
+    barmanObjectStore:
+      endpointURL: https://62f4eb07502220f46e423c5a98396b16.r2.cloudflarestorage.com
+      destinationPath: s3://postgres-backup/
+      s3Credentials:
+        accessKeyId:
+          name: backup-creds
+          key: accessKeyId
+        secretAccessKey:
+          name: backup-creds
+          key: secretAccessKey
+      wal:
+        compression: gzip
+        maxParallel: 8
+      data:
+        compression: gzip
