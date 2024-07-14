@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: quickwit-ingress
+  namespace: quickwit
+spec:
+  ingressClassName: tailscale
+  defaultBackend:
+    service:
+      name: quickwit-searcher
+      port:
+        name: rest
+  tls:
+    - hosts:
+      - quickwit
