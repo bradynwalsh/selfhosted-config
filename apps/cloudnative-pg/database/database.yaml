@@ -15,6 +15,12 @@ spec:
     - name: app
       createdb: true
       login: true
+    - name: quickwit
+      createdb: true
+      login: true
+      ensure: present
+      passwordSecret:
+        name: quickwit-user-password
   backup:
     retentionPolicy: '30d'
     barmanObjectStore:
