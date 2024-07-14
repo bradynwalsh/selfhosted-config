@@ -9,3 +9,4 @@ resources:
   - ./falco/ks.yaml
   - ./trivy/ks.yaml
   - ./cloudnative-pg/ks.yaml
+  - ./quickwit/ks.yaml
