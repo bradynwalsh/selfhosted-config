@@ -34,3 +34,4 @@ spec:
           endpoint: https://62f4eb07502220f46e423c5a98396b16.r2.cloudflarestorage.com
           access_key_id: ${accessKeyId}
           secret_access_key: ${secretAccessKey}
+          region: auto
