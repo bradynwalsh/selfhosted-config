@@ -1,0 +1,41 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: otel-log-collector
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: opentelemetry-collector
+      sourceRef:
+        kind: HelmRepository
+        name: open-telemetry
+      version: "0.97.1"
+  interval: 1h0m0s
+  timeout: 15m
+  releaseName: otel-log-collector
+  targetNamespace: open-telemetry
+  install:
+    crds: Create
+  upgrade:
+    crds: CreateReplace
+  values:
+    mode: daemonset
+    image:
+      repository: "otel/opentelemetry-collector-k8s"
+    presets:
+      logsCollection:
+        enabled: true
+      kubernetesAttributes:
+        enabled: true
+    config:
+      exporters:
+        otlp:
+          endpoint: quickwit-indexer.quickwit:7281
+          tls:
+            insecure: true
+      service:
+        pipelines:
+          logs:
+            exporters:
+              - otlp

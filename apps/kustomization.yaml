@@ -10,3 +10,4 @@ resources:
   - ./trivy/ks.yaml
   - ./cloudnative-pg/ks.yaml
   - ./quickwit/ks.yaml
+  - ./open-telemetry/ks.yaml
