@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: quickwit
-      version: "0.7.12"
+      version: "0.7.15"
   interval: 1h0m0s
   timeout: 20m
   releaseName: quickwit
