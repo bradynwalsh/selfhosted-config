@@ -1,0 +1,25 @@
+encryption:
+  enabled: true
+  type: "wireguard"
+  nodeEncryption: true
+
+hubble:
+  relay:
+    enabled: true
+    rollOutPods: true
+  tls:
+    auto:
+      method: "cronJob"
+  ui:
+    enabled: true
+    rollOutPods: true
+
+operator:
+  rollOutPods: true
+
+rollOutCiliumPods: true
+
+tunnelProtocol: "geneve"
+
+envoy:
+  baseID: 1
