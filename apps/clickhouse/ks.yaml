@@ -8,7 +8,7 @@ spec:
   interval: 15m0s
   url: oci://registry-1.docker.io/bitnamicharts/clickhouse
   ref:
-    tag: 8.0.5
+    tag: 8.0.6
 ---
 # yaml-language-server: $schema=https://raw.githubusercontent.com/fluxcd-community/flux2-schemas/main/kustomization-kustomize-v1.json
 apiVersion: kustomize.toolkit.fluxcd.io/v1
