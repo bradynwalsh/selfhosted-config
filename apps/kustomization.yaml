@@ -9,6 +9,4 @@ resources:
   - ./ntfy/ks.yaml
   - ./falco/ks.yaml
   - ./trivy/ks.yaml
-  - ./quickwit/ks.yaml
-  - ./open-telemetry/ks.yaml
-  - ./yugabyte/ks.yaml
+  # - ./open-telemetry/ks.yaml
