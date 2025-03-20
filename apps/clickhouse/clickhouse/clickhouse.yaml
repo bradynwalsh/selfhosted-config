@@ -32,3 +32,4 @@ spec:
         enabled: true
     zookeeper:
       enabled: false
+    loglevel: warning
