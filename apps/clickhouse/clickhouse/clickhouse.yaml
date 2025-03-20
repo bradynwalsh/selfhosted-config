@@ -17,7 +17,7 @@ spec:
   releaseName: clickhouse
   targetNamespace: clickhouse
   values:
-    resourcesPreset: large
+    resourcesPreset: xlarge
     auth:
       existingSecret: clickhouse-password
       existingSecretKey: admin-password
