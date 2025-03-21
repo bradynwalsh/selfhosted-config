@@ -30,12 +30,18 @@ spec:
         enabled: true
     config:
       exporters:
-        otlp:
-          endpoint: quickwit-indexer.quickwit:7281
+        otlphttp:
+          endpoint: 'parseable-ingestor-headless.parseable.svc.cluster.local:8000'
+          headers:
+            Authorization: 'Basic YWRtaW46YWRtaW4='
+            X-P-Log-Source: otel
+            X-P-Stream: otel
+            Content-Type: application/json
+          encoding: json
           tls:
             insecure: true
       service:
         pipelines:
           logs:
             exporters:
-              - otlp
+              - otlphttp

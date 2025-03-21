@@ -10,4 +10,4 @@ resources:
   - ./falco/ks.yaml
   - ./trivy/ks.yaml
   - ./parseable/ks.yaml
-  # - ./open-telemetry/ks.yaml
+  - ./open-telemetry/ks.yaml
