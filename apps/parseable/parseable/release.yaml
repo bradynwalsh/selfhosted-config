@@ -26,11 +26,13 @@ spec:
         ingestor:
           enabled: true
           size: 5Gi
+          storageClass: null
         data:
           enabled: false
         ## enabling the disk on querier adds the hot-tier.
         querier:
           enabled: false
+          storageClass: null
           size: 20Gi
       s3ModeSecret:
         enabled: true
