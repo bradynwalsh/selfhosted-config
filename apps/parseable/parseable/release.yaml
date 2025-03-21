@@ -1,0 +1,40 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: parseable
+  namespace: flux-system
+spec:
+  chart:
+    spec:
+      chart: parseable
+      sourceRef:
+        kind: HelmRepository
+        name: parseable
+      version: "1.7.2"
+  interval: 1h0m0s
+  timeout: 10m
+  releaseName: parseable
+  targetNamespace: parseable
+  values:
+    parseable:
+      store: s3-store
+      highAvailability:
+        enabled: true
+      persistence:
+        staging:
+          enabled: false
+        ingestor:
+          enabled: true
+          size: 5Gi
+        data:
+          enabled: false
+        ## enabling the disk on querier adds the hot-tier.
+        querier:
+          enabled: false
+          size: 20Gi
+      s3ModeSecret:
+        enabled: true
+      metrics:
+        serviceMonitor:
+          enabled: true
+      

@@ -1,0 +1,20 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/fluxcd-community/flux2-schemas/main/kustomization-kustomize-v1.json
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: parseable
+  namespace: flux-system
+spec:
+  interval: 1h0m0s
+  path: ./apps/parseable/parseable
+  prune: true
+  dependsOn:
+    - name: sealed-secrets
+    - name: kube-prometheus-stack
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  timeout: 10m0s
+  wait: true
+  force: true
