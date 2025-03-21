@@ -34,8 +34,8 @@ spec:
           endpoint: 'http://parseable-ingestor-headless.parseable.svc.cluster.local:8000'
           headers:
             Authorization: 'Basic YWRtaW46YWRtaW4='
-            X-P-Log-Source: otel
-            X-P-Stream: otel
+            X-P-Log-Source: otel-logs
+            X-P-Stream: otel-logs
             Content-Type: application/json
           encoding: json
           tls:
