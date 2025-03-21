@@ -12,6 +12,7 @@ spec:
   dependsOn:
     - name: sealed-secrets
     - name: kube-prometheus-stack
+    - name: tailscale-operator
   sourceRef:
     kind: GitRepository
     name: flux-system
