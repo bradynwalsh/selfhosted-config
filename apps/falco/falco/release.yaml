@@ -34,6 +34,7 @@ spec:
             docker.io/tailscale/tailscale,
             quay.io/kiwigrid/k8s-sidecar,
             quay.io/platform9/dashboard-metrics-scraper,
+            docker.io/kubernetesui/metrics-scraper,
             quay.io/prometheus/prometheus,
             ghcr.io/aquasecurity/trivy-operator,
             mirror.gcr.io/aquasec/trivy-operator,
