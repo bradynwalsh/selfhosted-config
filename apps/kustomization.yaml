@@ -11,3 +11,4 @@ resources:
   - ./trivy/ks.yaml
   - ./parseable/ks.yaml
   - ./open-telemetry/ks.yaml
+  - ./cert-manager/ks.yaml
