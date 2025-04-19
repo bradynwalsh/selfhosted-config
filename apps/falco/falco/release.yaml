@@ -48,7 +48,8 @@ spec:
             ghcr.io/fluxcd/helm-controller,
             ghcr.io/fluxcd/kustomize-controller,
             ghcr.io/fluxcd/source-controller,
-            ghcr.io/fluxcd/notification-controller))
+            ghcr.io/fluxcd/notification-controller,
+            ghcr.io/open-telemetry/opentelemetry-collector-releases/opentelemetry-collector-k8s))
       rules-k8s-cnpg-wal-macro.yaml: |-
         - macro: postgres_running_wal_e
           override:
