@@ -23,3 +23,6 @@ tunnelProtocol: "geneve"
 
 envoy:
   baseID: 1
+
+hostFirewall:
+  enabled: true
