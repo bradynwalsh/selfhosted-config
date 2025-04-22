@@ -1,0 +1,22 @@
+apiVersion: cilium.io/v2
+kind: CiliumClusterwideNetworkPolicy
+metadata:
+  name: deny-node-exporter-ingress
+spec:
+  description: |
+    Deny all ingress traffic from outside the cluster to the node-exporter pods.
+    This policy is used to prevent any unwanted traffic from reaching the node-exporter pods.
+    It is important to note that this policy does not block traffic from the node-exporter pods to the host network.
+  enableDefaultDeny: 
+    ingress: false
+    egress: false
+  nodeSelector:
+    matchLabels:
+      kubernetes.io/os: linux
+  ingressDeny:
+    - toPorts:
+        - ports:
+            - port: 9100
+              protocol: TCP
+      fromEntities:
+        - world
