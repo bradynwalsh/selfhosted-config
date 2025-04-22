@@ -10,9 +10,7 @@ spec:
   enableDefaultDeny: 
     ingress: false
     egress: false
-  nodeSelector:
-    matchLabels:
-      kubernetes.io/os: linux
+  nodeSelector: {}
   ingressDeny:
     - toPorts:
         - ports:
