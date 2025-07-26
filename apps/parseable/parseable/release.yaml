@@ -34,9 +34,10 @@ spec:
           enabled: false
           storageClass: null
           size: 20Gi
+      gcsModeSecret:
+        enabled: false
       s3ModeSecret:
         enabled: true
       metrics:
         serviceMonitor:
           enabled: false
-      
