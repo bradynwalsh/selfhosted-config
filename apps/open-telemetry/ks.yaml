@@ -8,7 +8,6 @@ metadata:
 spec:
   dependsOn:
   - name: kube-prometheus-stack
-  - name: parseable
   interval: 1h0m0s
   path: ./apps/open-telemetry/collector
   prune: true
